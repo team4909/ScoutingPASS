@@ -1,5 +1,4 @@
-var config_data = `
-{
+let CU_data = {
   "enable_google_sheets": "true", 
   "title": "Scouting PASS 2023",
   "page_title": "Charged Up",
@@ -15,7 +14,7 @@ var config_data = `
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2022carv",
+      "defaultValue": "2022newton",
       "required": "true",
       "disabled": "true"
     },
@@ -77,7 +76,7 @@ var config_data = `
       "shape": "circle 12 black red true"
     },
     { "name": "Points Scored",
-    "code": "ps",
+    "code": "psa",
     "type": "counter"
     },    
     { "name": "Links Scored",
@@ -110,7 +109,7 @@ var config_data = `
       "cycleTimer": "tct"
     },
     { "name": "Points Scored",
-    "code": "ps",
+    "code": "pst",
     "type": "counter"
     },        
     { "name": "Links Scored",
@@ -168,4 +167,5 @@ var config_data = `
       "maxSize": 50
     }
   ]
-}`;
+}
+var config_data = JSON.stringify(CU_data);

@@ -1,7 +1,7 @@
-var config_data = `
-{
-  "enable_google_sheets": "true", 
+let config = {
+
   "title": "Scouting PASS 2023",
+  "enable_google_sheets": "true",   
   "page_title": "Charged Up",
   "checkboxAs": "10",
 
@@ -86,13 +86,13 @@ var config_data = `
       "shape": "circle 12 black red true"
     },
     { "name": "Points Scored",
-    "code": "ps",
+    "code": "psa",
     "gsCol": "aPoint",
     "type": "counter"
     },
     { "name": "Links Scored",
     "code": "ls",
-    "gsCol: "aLink
+    "gsCol": "aLink",
     "type": "counter"
     },
     { "name": "Docked",
@@ -123,7 +123,7 @@ var config_data = `
       "cycleTimer": "tct"
     },
     { "name": "Points Scored",
-    "code": "ps",
+    "code": "pst",
     "gsCol": "tPoint",
     "type": "counter"
     },  
@@ -176,7 +176,7 @@ var config_data = `
     },
     { "name": "Did It Defend?",
     "code": "did",
-    "gsCol": "defend"
+    "gsCol": "defend",
     "type": "bool"
     },
     { "name": "Dropped Cones (>2)",
@@ -192,4 +192,6 @@ var config_data = `
       "maxSize": 50
     }
   ]
-}`;
+}
+
+var config_data = JSON.stringify(config);
