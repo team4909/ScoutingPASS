@@ -91,7 +91,7 @@ let config = {
     "type": "counter"
     },
     { "name": "Links Scored",
-    "code": "ls",
+    "code": "lsa",
     "gsCol": "aLink",
     "type": "counter"
     },
@@ -128,7 +128,7 @@ let config = {
     "type": "counter"
     },  
     { "name": "Links Scored",
-    "code": "ls",
+    "code": "lst",
     "gsCol": "tLink",
     "type": "counter"
     }, 

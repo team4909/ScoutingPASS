@@ -80,7 +80,7 @@ let CU_data = {
     "type": "counter"
     },    
     { "name": "Links Scored",
-    "code": "ls",
+    "code": "lsa",
     "type": "counter"
     },
     { "name": "Docked",
@@ -113,7 +113,7 @@ let CU_data = {
     "type": "counter"
     },        
     { "name": "Links Scored",
-    "code": "ls",
+    "code": "lst",
     "type": "counter"
     },    
     { "name": "Dropped<br>Game Pieces",
