@@ -14,7 +14,7 @@ let CU_data = {
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023WeekZero",
+      "defaultValue": "2023rinsc",
       "required": "true",
       "disabled": "true"
     },
