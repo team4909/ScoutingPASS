@@ -106,8 +106,7 @@ let CU_data = {
       "toggleClick": "true",
       "showFlip": "false",
       "showUndo": "false",
-      "shape": "circle 12 black red true",
-      "cycleTimer": "tct"
+      "shape": "circle 12 black red true"
     },
     { "name": "Points Scored",
     "code": "pst",
@@ -165,7 +164,7 @@ let CU_data = {
       "code": "co",
       "type": "text",
       "size": 15,
-      "maxSize": 50
+      "maxSize": 999
     }
   ]
 }
