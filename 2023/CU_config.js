@@ -4,7 +4,7 @@ let CU_data = {
   "page_title": "Charged Up",
   "checkboxAs": "10",
   "prematch": [
-    { "name": "Scouter Initials",
+    { "name": "Scouter Name",
       "code": "s",
       "type": "scouter",
       "size": 5,
@@ -87,6 +87,7 @@ let CU_data = {
       "code": "ad",
       "type":"radio",
       "choices": {
+        "p": "Parked<br>",
         "d": "Docked (not Engaged)<br>",
         "e": "Engaged<br>",
         "a": "Attempted but failed<br>",
