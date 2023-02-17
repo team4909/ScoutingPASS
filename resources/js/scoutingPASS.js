@@ -836,6 +836,7 @@ function validateData() {
 }
 
 function getData(useStr) {
+  const delimiter = `\t`;
   var str = ''
   var fd = new FormData()
   var rep = ''
@@ -857,35 +858,39 @@ function getData(useStr) {
     if (radio > -1) {
       if (e.checked) {
         if (start == false) {
-          str = str + ';'
+          str = str + delimiter
         } else {
           start = false
         }
         // str=str+code.substr(0,radio)+'='+code.substr(radio+1)
         // document.getElementById("display_"+code.substr(0, radio)).value = code.substr(radio+1)
         if (useStr) {
-          str = str + code.substr(0, radio) + '=' + e.value
+          // str = str + code.substr(0, radio) + '=' + e.value
+          str = str + e.value
         } else {
           fd.append(name, '' + e.value)
         }
         document.getElementById("display_" + code.substr(0, radio)).value = e.value
+        // document.getElementById("display_").value = e.value
       }
     } else {
       if (start == false) {
-        str = str + ';'
+        str = str + delimiter
       } else {
         start = false
       }
       if (e.value == "on") {
         if (e.checked) {
           if (useStr) {
-            str = str + code + '=' + checkedChar
+            // str = str + code + '=' + checkedChar
+            str = str + checkedChar
           } else {
             fd.append(name, checkedChar)
           }
         } else {
           if (useStr) {
-            str = str + code + '=' + uncheckedChar
+            //str = str + code + '=' + uncheckedChar
+            str = str + uncheckedChar
           } else {
             fd.append(name, uncheckedChar)
           }
@@ -894,9 +899,9 @@ function getData(useStr) {
 	if (e.className == "cycle") {
 	  e = document.getElementById("cycletime_" + code)
 	}
-	let val = e.value.split(';').join('-').replace(/"/g,'')
+	let val = e.value.split(delimiter).join('-').replace(/"/g,'')
         if (useStr) {
-          str = str + code + '=' + val
+          str = str + val
         } else {
           fd.append(name, val)
         }
