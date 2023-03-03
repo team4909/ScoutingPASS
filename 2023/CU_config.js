@@ -7,8 +7,8 @@ let CU_data = {
     { "name": "Scouter Name",
       "code": "s",
       "type": "scouter",
-      "size": 10,
-      "maxSize": 999,
+      "size": 5,
+      "maxSize": 5,
       "required": "true"
     },
     { "name": "Event",
@@ -75,19 +75,23 @@ let CU_data = {
       "showUndo": "false",
       "shape": "circle 12 black red true"
     },
-    { "name": "Dropped<br> Game Pieces",
-    "code": "da",
+    { "name": "Points Scored",
+    "code": "psa",
     "type": "counter"
-    }, 
-    { "name": "Status",
-      "code": "st",
+    },    
+    { "name": "Links Scored",
+    "code": "lsa",
+    "type": "counter"
+    },
+    { "name": "Docked",
+      "code": "ad",
       "type":"radio",
       "choices": {
         "p": "Parked<br>",
-        "d": "Docked (Not Balanced)<br>",
-        "e": "Engaged (Balanced)<br>",
+        "d": "Docked (not Engaged)<br>",
+        "e": "Engaged<br>",
         "a": "Attempted but failed<br>",
-        "x": "Left Community"
+        "x": "Not attempted"
       },
       "defaultValue": "x"
     }
@@ -103,40 +107,54 @@ let CU_data = {
       "showFlip": "false",
       "showUndo": "false",
       "shape": "circle 12 black red true"
-    },   
-    { "name": "Dropped<br> Game Pieces",
-    "code": "dt",
+    },
+    { "name": "Points Scored",
+    "code": "pst",
     "type": "counter"
-    }, 
-    { "name": "Died/Immobilized",
-    "code": "die",
-    "type": "bool"
+    },        
+    { "name": "Links Scored",
+    "code": "lst",
+    "type": "counter"
+    },    
+    { "name": "Dropped<br>Game Pieces",
+      "code": "wf",
+      "type": "bool"
+    },
+    { "name": "Was Defended",
+      "code": "wd",
+      "type": "bool"
     }
   ],
   "endgame": [
-
-    { "name": "Did It<br>Defend?",
-      "code": "did",
-      "type": "level",
-      "choices": {
-        "yi": "Yes, It Stopped Robots From Intaking<br>",
-        "yn": "Yes, Made it Difficult To Navigate<br>",
-        "n": "No"
-      },
-      "defaultValue": "qm",
-      "required": "true"
+    { "name": "Docking Timer",
+      "code": "dt",
+      "type": "timer"
     },
-    { "name": "Comments",
-      "code": "co",
-      "type": "text",
-      "size": 15,
-      "maxSize": 999
-  }
+    { "name": "Final Status",
+      "code": "fs",
+      "type":"radio",
+      "choices": {
+        "p": "Parked<br>",
+        "d": "Docked (Not Engaged)<br>",
+        "e": "Engaged<br>",
+        "a": "Attempted but failed<br>",
+        "x": "Not attempted"
+      },
+      "defaultValue": "x"
+    },
+    { "name": "Total # of alliance<br>robots docked/engaged",
+      "code": "dn",
+      "type": "counter"
+    }
   ],
   "postmatch": [ 
     { "name": "Died/Immobilized",
       "code": "die",
       "type": "bool"
+    },
+    { "name": "Did It Defend?",
+    "code": "did",
+    "type": "bool"
     },
     { "name": "Dropped Cones (>2)",
       "code": "dc",

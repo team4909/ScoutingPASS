@@ -216,7 +216,8 @@ td {
     padding: 10px 4px;
 }
 
-input { 
+input {
+    font-size: 16px;
     font: roboto;
     color: red;
 }
