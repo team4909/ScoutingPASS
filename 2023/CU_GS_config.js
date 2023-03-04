@@ -85,27 +85,27 @@ let config = {
       "showUndo": "false",
       "shape": "circle 12 black red true"
     },
-    { "name": "Points Scored",
-    "code": "psa",
-    "gsCol": "aPoint",
+    { "name": "Dropped<br> Game Pieces",
+    "code": "da",
+    "gsCol": "drop",
     "type": "counter"
-    },
-    { "name": "Links Scored",
-    "code": "lsa",
-    "gsCol": "aLink",
-    "type": "counter"
-    },
-    { "name": "Docked",
-      "code": "ad",
-      "gsCol": "autoDocked",
+    }, 
+    { "name": "Status",
+      "code": "st",
+      "gsCol": "stat",
       "type":"radio",
       "choices": {
-        "d": "Docked (not Engaged)<br>",
-        "e": "Engaged<br>",
+        "p": "Parked<br>",
+        "d": "Docked (Not Balanced)<br>",
+        "e": "Engaged (Balanced)<br>",
         "a": "Attempted but failed<br>",
-        "x": "Not attempted"
       },
       "defaultValue": "x"
+    },
+    { "name": "Left Community?",
+    "code": "lef",
+    "gsCol": "left",
+    "type": "bool"
     }
   ],
   "teleop": [
@@ -122,75 +122,57 @@ let config = {
       "shape": "circle 12 black red true",
       "cycleTimer": "tct"
     },
-    { "name": "Points Scored",
-    "code": "pst",
-    "gsCol": "tPoint",
-    "type": "counter"
-    },  
-    { "name": "Links Scored",
-    "code": "lst",
-    "gsCol": "tLink",
+    { "name": "Dropped<br> Game Pieces",
+    "code": "dt",
+    "gsCol": "dropt",
     "type": "counter"
     }, 
-    { "name": "Dropped<br>Game Pieces",
-    "code": "wf",
-    "gsCol": "dropped",
+    { "name": "Died/Immobilized",
+    "code": "die",
+    "gsCol": "died",
     "type": "bool"
-    },
-    { "name": "Was Defended",
-      "code": "wd",
-      "gsCol": "wasDefended",
-      "type": "bool"
     }
   ],
   "endgame": [
-    { "name": "Docking Timer",
-      "code": "dt",
-      "gsCol": "dockingTime",
-      "type": "timer"
-    },
-    { "name": "Final Status",
-      "code": "fs",
-      "gsCol": "endgameStatus",
-      "type":"radio",
+
+    { "name": "Did It<br>Defend?",
+      "code": "did",
+      "gsCol": "defend",
+
+      "type": "level",
       "choices": {
-        "p": "Parked<br>",
-        "d": "Docked (Not Engaged)<br>",
-        "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
-        "x": "Not attempted"
+        "yi": "Yes, It Stopped Robots From Intaking<br>",
+        "yn": "Yes, Made it Difficult To Navigate<br>",
+        "n": "No"
       },
-      "defaultValue": "x"
-    },
-    { "name": "Total # of alliance<br>robots docked/engaged",
-      "code": "dn",
-      "gsCol": "numOfRobotsDocked",
-      "type": "counter"
-    }
-  ],
-  "postmatch": [
-    { "name": "Died/Immobilized",
-      "code": "die",
-      "gsCol": "die",
-      "type": "bool"
-    },
-    { "name": "Did It Defend?",
-    "code": "did",
-    "gsCol": "defend",
-    "type": "bool"
-    },
-    { "name": "Dropped Cones (>2)",
-      "code": "dc",
-      "gsCol": "droppedCones",
-      "type": "bool"
+
     },
     { "name": "Comments",
       "code": "co",
       "gsCol": "comments",
       "type": "text",
       "size": 15,
-      "maxSize": 50
-    }
+      "maxSize": 999
+  }
+  // ],
+  // "postmatch": [
+  //   { "name": "Died/Immobilized",
+  //     "code": "di",
+  //     "gsCol": "die",
+  //     "type": "bool"
+  //   },
+  //   { "name": "Dropped Cones (>2)",
+  //     "code": "dc",
+  //     "gsCol": "droppedCones",
+  //     "type": "bool"
+  //   },
+  //   { "name": "Comments",
+  //     "code": "c",
+  //     "gsCol": "comment",
+  //     "type": "text",
+  //     "size": 15,
+  //     "maxSize": 50
+  //   }
   ]
 }
 

@@ -87,9 +87,12 @@ let CU_data = {
         "d": "Docked (Not Balanced)<br>",
         "e": "Engaged (Balanced)<br>",
         "a": "Attempted but failed<br>",
-        "x": "Left Community"
       },
       "defaultValue": "x"
+    },
+    { "name": "Left Community?",
+    "code": "lef",
+    "type": "bool"
     }
   ],
   "teleop": [
@@ -132,22 +135,22 @@ let CU_data = {
       "size": 15,
       "maxSize": 999
   }
-  ],
-  "postmatch": [ 
-    { "name": "Died/Immobilized",
-      "code": "die",
-      "type": "bool"
-    },
-    { "name": "Dropped Cones (>2)",
-      "code": "dc",
-      "type": "bool"
-    },
-    { "name": "Comments",
-      "code": "co",
-      "type": "text",
-      "size": 15,
-      "maxSize": 999
-    }
+  // ],
+  // "postmatch": [ 
+  //   { "name": "Died/Immobilized",
+  //     "code": "di",
+  //     "type": "bool"
+  //   },
+  //   { "name": "Dropped Cones (>2)",
+  //     "code": "dc",
+  //     "type": "bool"
+  //   },
+  //   { "name": "Comments",
+  //     "code": "c",
+  //     "type": "text",
+  //     "size": 15,
+  //     "maxSize": 999
+  //   }
   ]
 }
 var config_data = JSON.stringify(CU_data);

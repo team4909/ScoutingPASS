@@ -713,12 +713,12 @@ function configure() {
   });
 
   // Configure postmatch screen
-  pmc = mydata.postmatch;
-  pmt = document.getElementById("postmatch_table");
-  var idx = 0;
-  pmc.forEach(element => {
-    idx = addElement(pmt, idx, element);
-  });
+  // pmc = mydata.postmatch;
+  // pmt = document.getElementById("postmatch_table");
+  // var idx = 0;
+  // pmc.forEach(element => {
+  //   idx = addElement(pmt, idx, element);
+  // });
 
   if (!enableGoogleSheets) {
     document.getElementById("submit").style.display = "none";
