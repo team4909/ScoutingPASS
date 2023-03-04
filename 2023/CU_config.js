@@ -7,8 +7,8 @@ let CU_data = {
     { "name": "Scouter Name",
       "code": "s",
       "type": "scouter",
-      "size": 5,
-      "maxSize": 5,
+      "size": 10,
+      "maxSize": 999,
       "required": "true"
     },
     { "name": "Event",
@@ -75,23 +75,19 @@ let CU_data = {
       "showUndo": "false",
       "shape": "circle 12 black red true"
     },
-    { "name": "Points Scored",
-    "code": "psa",
+    { "name": "Dropped<br> Game Pieces",
+    "code": "da",
     "type": "counter"
-    },    
-    { "name": "Links Scored",
-    "code": "lsa",
-    "type": "counter"
-    },
-    { "name": "Docked",
-      "code": "ad",
+    }, 
+    { "name": "Status",
+      "code": "st",
       "type":"radio",
       "choices": {
         "p": "Parked<br>",
-        "d": "Docked (not Engaged)<br>",
-        "e": "Engaged<br>",
+        "d": "Docked (Not Balanced)<br>",
+        "e": "Engaged (Balanced)<br>",
         "a": "Attempted but failed<br>",
-        "x": "Not attempted"
+        "x": "Left Community"
       },
       "defaultValue": "x"
     }
@@ -107,54 +103,40 @@ let CU_data = {
       "showFlip": "false",
       "showUndo": "false",
       "shape": "circle 12 black red true"
-    },
-    { "name": "Points Scored",
-    "code": "pst",
+    },   
+    { "name": "Dropped<br> Game Pieces",
+    "code": "dt",
     "type": "counter"
-    },        
-    { "name": "Links Scored",
-    "code": "lst",
-    "type": "counter"
-    },    
-    { "name": "Dropped<br>Game Pieces",
-      "code": "wf",
-      "type": "bool"
-    },
-    { "name": "Was Defended",
-      "code": "wd",
-      "type": "bool"
+    }, 
+    { "name": "Died/Immobilized",
+    "code": "die",
+    "type": "bool"
     }
   ],
   "endgame": [
-    { "name": "Docking Timer",
-      "code": "dt",
-      "type": "timer"
-    },
-    { "name": "Final Status",
-      "code": "fs",
-      "type":"radio",
+
+    { "name": "Did It<br>Defend?",
+      "code": "did",
+      "type": "level",
       "choices": {
-        "p": "Parked<br>",
-        "d": "Docked (Not Engaged)<br>",
-        "e": "Engaged<br>",
-        "a": "Attempted but failed<br>",
-        "x": "Not attempted"
+        "yi": "Yes, It Stopped Robots From Intaking<br>",
+        "yn": "Yes, Made it Difficult To Navigate<br>",
+        "n": "No"
       },
-      "defaultValue": "x"
+      "defaultValue": "qm",
+      "required": "true"
     },
-    { "name": "Total # of alliance<br>robots docked/engaged",
-      "code": "dn",
-      "type": "counter"
-    }
+    { "name": "Comments",
+      "code": "co",
+      "type": "text",
+      "size": 15,
+      "maxSize": 999
+  }
   ],
   "postmatch": [ 
     { "name": "Died/Immobilized",
       "code": "die",
       "type": "bool"
-    },
-    { "name": "Did It Defend?",
-    "code": "did",
-    "type": "bool"
     },
     { "name": "Dropped Cones (>2)",
       "code": "dc",
