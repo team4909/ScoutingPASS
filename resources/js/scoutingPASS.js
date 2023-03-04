@@ -953,7 +953,7 @@ function clearForm() {
   var match = 0;
   var e = 0;
 
-  swipePage(-5)
+  swipePage(-4)
 
   // Increment match
   match = parseInt(document.getElementById("input_m").value)
