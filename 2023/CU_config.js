@@ -14,7 +14,7 @@ let CU_data = {
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023rinsc",
+      "defaultValue": "2023mabos",
       "required": "true",
       "disabled": "true"
     },
@@ -83,7 +83,6 @@ let CU_data = {
       "code": "st",
       "type":"radio",
       "choices": {
-        "p": "Parked<br>",
         "d": "Docked (Not Balanced)<br>",
         "e": "Engaged (Balanced)<br>",
         "a": "Attempted but failed<br>",
