@@ -14,7 +14,7 @@ let CU_data = {
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023necmp2",
+      "defaultValue": "2023necmp",
       "required": "true",
       "disabled": "true"
     },
