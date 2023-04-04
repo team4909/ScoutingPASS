@@ -14,7 +14,7 @@ let CU_data = {
     { "name": "Event",
       "code": "e",
       "type": "event",
-      "defaultValue": "2023mabos",
+      "defaultValue": "2023necmp",
       "required": "true",
       "disabled": "true"
     },
